@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="prefijoNuevo">
+    <file>logo_en_contactenos.png</file>
+  </qresource>
+</RCC>

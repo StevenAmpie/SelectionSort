@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="LogoPython">
+    <file>LogoPython.png</file>
+  </qresource>
+  <qresource prefix="Carros">
+    <file>car3.png</file>
+    <file>car4.png</file>
+    <file>car5.png</file>
+    <file>car6.png</file>
+    <file>car7.png</file>
+    <file>car8.png</file>
+    <file>car2.png</file>
+    <file>car1.png</file>
+  </qresource>
+  <qresource prefix="barquito">
+    <file>barquito.png</file>
+  </qresource>
+  <qresource prefix="Parqueo">
+    <file>palancaFin.png</file>
+    <file>palanca.png</file>
+    <file>Parqueo.jpg</file>
+  </qresource>
+</RCC>

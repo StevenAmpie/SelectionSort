@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="ilus1"/>
+  <qresource prefix="prefijoNuevo">
+    <file>complejidadalgo.png</file>
+    <file>selectionsortnew.png</file>
+  </qresource>
+</RCC>
