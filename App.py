@@ -50,7 +50,7 @@ class App(QtWidgets.QMainWindow):
 
         
 
-                #VARIABLES DEL METODO: cantBarcos()
+                #VARIABLES 
 
         self.previous_value = self.ScreenMenu.spinBoxCantElementos.value() 
 
@@ -74,6 +74,8 @@ class App(QtWidgets.QMainWindow):
                      "car5", "car6", "car7", "car8"]
         
         self.array=[]
+
+        self.flag = 0
        
        
 
@@ -101,11 +103,7 @@ class App(QtWidgets.QMainWindow):
         self.ScreenAnimation.ButtonIniciarSort.clicked.connect(self.changeBotonIniciar)
         self.ScreenAnimation.ButtonIniciarSort.clicked.connect(self.selectionSort)
 
-        self.flag = 0
         
-        
-        
-
         
 
     #Metodos
@@ -114,23 +112,23 @@ class App(QtWidgets.QMainWindow):
             
             for i in range(len(self.array)):
 
-                min_index = i
+                minIndex = i
 
                 # Encontrar el índice del mínimo
                 for j in range(i + 1, len(self.array)):
-                    if self.array[j] <= self.array[min_index]:
-                        min_index = j
+                    if self.array[j] <= self.array[minIndex]:
+                        minIndex = j
 
                 # Intercambiar elementos en la lista de números
-                self.array[i], self.array[min_index] = self.array[min_index], self.array[i]
+                self.array[i], self.array[minIndex] = self.array[minIndex], self.array[i]
 
     
-                # Intercambiar en la self.lista2 de carros
-                self.listaCarros[i], self.listaCarros[min_index] = self.listaCarros[min_index], self.listaCarros[i]
+                # Intercambiar widgets de la lista de carros
+                self.listaCarros[i], self.listaCarros[minIndex] = self.listaCarros[minIndex], self.listaCarros[i]
 
             
-            print(self.array)
-            QTimer.singleShot(1000, self.mostrarAnimacion)
+            print(self.array) #imprime el array ordenado por consola
+            QTimer.singleShot(1000, self.mostrarAnimacion) #dispara la animacion 1 segundo despues de ordenar el codigo
 
     def mostrarAnimacion(self):
 
