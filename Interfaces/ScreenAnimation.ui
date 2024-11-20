@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1228</width>
+    <height>866</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1228</width>
+    <height>866</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1228</width>
+    <height>866</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="parqueo">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1228</width>
+      <height>866</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1228</width>
+      <height>866</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1228</width>
+      <height>866</height>
+     </size>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipDuration">
+     <number>-1</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>Parqueo.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelSort">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>830</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>191</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>191</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 85, 0);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;SORT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car2.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonIniciarSortFin">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>700</y>
+      <width>111</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>111</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::ClickFocus</enum>
+    </property>
+    <property name="toolTipDuration">
+     <number>0</number>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Parqueo/palancaFin.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car5">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car5.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car8">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car8.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car7">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+    <property name="pixmap">
+     <pixmap>car7.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ButtonIniciarSort">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>700</y>
+      <width>111</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>111</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>131</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Parqueo/palanca.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car6">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car6.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car9">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car9.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="car10">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>car10.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion5">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion6">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion7">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion8">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion9">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="posicion10">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>500</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo1">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo3">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo6">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo5">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo7">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo8">
+    <property name="geometry">
+     <rect>
+      <x>850</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo10">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="parqueo9">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>200</y>
+      <width>101</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>101</width>
+      <height>161</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="LogoPython.qrc"/>
+ </resources>
+ <connections/>
+</ui>
