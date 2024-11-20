@@ -308,7 +308,7 @@ class App(QtWidgets.QMainWindow):
         painter = QPainter(new_pixmap)
 
         # Configurar fuente y color del texto
-        font = QFont("MS Shell Dlg 2", 64, QFont.Bold)
+        font = QFont("MS Shell Dlg 2", 52, QFont.Bold)
         painter.setFont(font)
         painter.setPen(Qt.black)  # Cambiar color del texto si es necesario
 

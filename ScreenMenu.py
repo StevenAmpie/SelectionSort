@@ -14,9 +14,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class ScreenMenu(object):
     def setupUi(self, window1):
         window1.setObjectName("window1")
-        window1.resize(1500, 866)
-        window1.setMinimumSize(QtCore.QSize(1500, 866))
-        window1.setMaximumSize(QtCore.QSize(1500, 866))
+        window1.resize(1800, 866)
+        window1.setMinimumSize(QtCore.QSize(1800, 866))
+        window1.setMaximumSize(QtCore.QSize(1800, 866))
         window1.setAutoFillBackground(False)
         window1.setStyleSheet("background-color: rgb(33, 47, 61);")
         window1.setTabShape(QtWidgets.QTabWidget.Triangular)
@@ -24,26 +24,26 @@ class ScreenMenu(object):
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.labelLogoPython1 = QtWidgets.QLabel(self.centralwidget)
-        self.labelLogoPython1.setGeometry(QtCore.QRect(350, 60, 131, 111))
+        self.labelLogoPython1.setGeometry(QtCore.QRect(470, 60, 131, 111))
         self.labelLogoPython1.setStyleSheet("border-image: url(LogoPython.png);\n"
 "background-color: rgb(33, 47, 61);")
         self.labelLogoPython1.setText("")
         self.labelLogoPython1.setObjectName("labelLogoPython1")
         self.labelLogoPython2 = QtWidgets.QLabel(self.centralwidget)
-        self.labelLogoPython2.setGeometry(QtCore.QRect(1060, 60, 131, 111))
+        self.labelLogoPython2.setGeometry(QtCore.QRect(1180, 60, 131, 111))
         self.labelLogoPython2.setStyleSheet("border-image: url(LogoPython.png);\n"
 "background-color: rgb(33, 47, 61);")
         self.labelLogoPython2.setText("")
         self.labelLogoPython2.setObjectName("labelLogoPython2")
         self.labelTitulo = QtWidgets.QLabel(self.centralwidget)
-        self.labelTitulo.setGeometry(QtCore.QRect(520, 80, 511, 81))
+        self.labelTitulo.setGeometry(QtCore.QRect(640, 80, 511, 81))
         self.labelTitulo.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 75pt \"ROG Fonts\";\n"
 "background-color: rgb(24, 14, 25);\n"
 "border-radius: 20px;")
         self.labelTitulo.setObjectName("labelTitulo")
         self.spinBoxCantElementos = QtWidgets.QSpinBox(self.centralwidget)
-        self.spinBoxCantElementos.setGeometry(QtCore.QRect(640, 260, 131, 51))
+        self.spinBoxCantElementos.setGeometry(QtCore.QRect(760, 260, 131, 51))
         self.spinBoxCantElementos.setMouseTracking(False)
         self.spinBoxCantElementos.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 20pt \"MS Shell Dlg 2\";\n"
@@ -54,13 +54,13 @@ class ScreenMenu(object):
         self.spinBoxCantElementos.setProperty("value", 8)
         self.spinBoxCantElementos.setObjectName("spinBoxCantElementos")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(210, 260, 391, 41))
+        self.label.setGeometry(QtCore.QRect(330, 260, 391, 41))
         self.label.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font: 75 14pt \"Palatino Linotype\";\n"
 "border-radius: 20px;")
         self.label.setObjectName("label")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget.setGeometry(QtCore.QRect(20, 750, 1461, 61))
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 750, 1761, 81))
         self.layoutWidget.setObjectName("layoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget)
         self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetMinimumSize)
@@ -69,108 +69,108 @@ class ScreenMenu(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.spinBox1 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox1.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox1.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox1.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.spinBox1.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
         self.spinBox1.setKeyboardTracking(True)
-        self.spinBox1.setMaximum(999)
+        self.spinBox1.setMaximum(9999)
         self.spinBox1.setObjectName("spinBox1")
         self.horizontalLayout.addWidget(self.spinBox1)
         self.spinBox2 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox2.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox2.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox2.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox2.setMaximum(999)
+        self.spinBox2.setMaximum(9999)
         self.spinBox2.setObjectName("spinBox2")
         self.horizontalLayout.addWidget(self.spinBox2)
         self.spinBox3 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox3.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox3.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox3.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox3.setMaximum(999)
+        self.spinBox3.setMaximum(9999)
         self.spinBox3.setObjectName("spinBox3")
         self.horizontalLayout.addWidget(self.spinBox3)
         self.spinBox4 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox4.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox4.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox4.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox4.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox4.setMaximum(999)
+        self.spinBox4.setMaximum(9999)
         self.spinBox4.setObjectName("spinBox4")
         self.horizontalLayout.addWidget(self.spinBox4)
         self.spinBox5 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox5.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox5.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox5.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox5.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox5.setMaximum(999)
+        self.spinBox5.setMaximum(9999)
         self.spinBox5.setObjectName("spinBox5")
         self.horizontalLayout.addWidget(self.spinBox5)
         self.spinBox6 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox6.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox6.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox6.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox6.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox6.setMaximum(999)
+        self.spinBox6.setMaximum(9999)
         self.spinBox6.setObjectName("spinBox6")
         self.horizontalLayout.addWidget(self.spinBox6)
         self.spinBox7 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox7.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox7.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox7.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox7.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox7.setMaximum(999)
+        self.spinBox7.setMaximum(9999)
         self.spinBox7.setObjectName("spinBox7")
         self.horizontalLayout.addWidget(self.spinBox7)
         self.spinBox8 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox8.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox8.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox8.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox8.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox8.setMaximum(999)
+        self.spinBox8.setMaximum(9999)
         self.spinBox8.setObjectName("spinBox8")
         self.horizontalLayout.addWidget(self.spinBox8)
         self.spinBox9 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox9.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox9.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox9.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox9.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox9.setMaximum(999)
+        self.spinBox9.setMaximum(9999)
         self.spinBox9.setObjectName("spinBox9")
         self.horizontalLayout.addWidget(self.spinBox9)
         self.spinBox10 = QtWidgets.QSpinBox(self.layoutWidget)
         self.spinBox10.setMinimumSize(QtCore.QSize(116, 42))
-        self.spinBox10.setMaximumSize(QtCore.QSize(116, 42))
+        self.spinBox10.setMaximumSize(QtCore.QSize(150, 42))
         self.spinBox10.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 25px;\n"
 "font: 20pt \"ROG Fonts\";")
-        self.spinBox10.setMaximum(999)
+        self.spinBox10.setMaximum(9999)
         self.spinBox10.setObjectName("spinBox10")
         self.horizontalLayout.addWidget(self.spinBox10)
         self.ordenarButton = QtWidgets.QPushButton(self.centralwidget)
-        self.ordenarButton.setGeometry(QtCore.QRect(970, 550, 271, 71))
+        self.ordenarButton.setGeometry(QtCore.QRect(1090, 550, 271, 71))
         self.ordenarButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.ordenarButton.setFocusPolicy(QtCore.Qt.ClickFocus)
         self.ordenarButton.setStyleSheet("background-color: rgb(0, 144, 84);\n"
@@ -192,7 +192,7 @@ class ScreenMenu(object):
         self.ordenarButton.setFlat(False)
         self.ordenarButton.setObjectName("ordenarButton")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(280, 340, 961, 201))
+        self.label_2.setGeometry(QtCore.QRect(400, 340, 961, 201))
         self.label_2.setStyleSheet("background-color: rgb(24, 14, 25);\n"
 "font: 75pt \"ROG Fonts\";\n"
 "color: rgb(255, 255, 255);")
