@@ -52,7 +52,7 @@ class App(QtWidgets.QMainWindow):
 
                 #VARIABLES 
 
-        self.previous_value = self.ScreenMenu.spinBoxCantElementos.value() 
+        self.previousValue = self.ScreenMenu.spinBoxCantElementos.value() 
 
         self.listaNums=[self.ScreenMenu.spinBox1, self.ScreenMenu.spinBox2,
                         self.ScreenMenu.spinBox3, self.ScreenMenu.spinBox4,
@@ -68,14 +68,34 @@ class App(QtWidgets.QMainWindow):
                          self.ScreenAnimation.car7, self.ScreenAnimation.car8,
                          self.ScreenAnimation.car9, self.ScreenAnimation.car10]
         
+        self.listaCarros2=[
+                         self.ScreenAnimation.car1, self.ScreenAnimation.car2, 
+                         self.ScreenAnimation.car3, self.ScreenAnimation.car4, 
+                         self.ScreenAnimation.car5, self.ScreenAnimation.car6,  
+                         self.ScreenAnimation.car7, self.ScreenAnimation.car8,
+                         self.ScreenAnimation.car9, self.ScreenAnimation.car10]
+        
+
+        self.minIndex = 0
+
+        self.indicesMinimos = []
+
+        self.arrayAux = []
+
+        self.carrosPrueba = []
 
 
-        self.carros=["car1","car2", "car3", "car4",
-                     "car5", "car6", "car7", "car8"]
+        self.listaParqueos=[self.ScreenAnimation.parqueo1, self.ScreenAnimation.parqueo2, self.ScreenAnimation.parqueo3,
+                          self.ScreenAnimation.parqueo4, self.ScreenAnimation.parqueo5, self.ScreenAnimation.parqueo6,
+                          self.ScreenAnimation.parqueo7, self.ScreenAnimation.parqueo8, self.ScreenAnimation.parqueo9,
+                          self.ScreenAnimation.parqueo10
+                         ]
         
         self.array=[]
 
         self.flag = 0
+
+
        
        
 
@@ -102,80 +122,125 @@ class App(QtWidgets.QMainWindow):
         self.ScreenIntro.pushButton.clicked.connect(self.changeScreenMenu)
         self.ScreenAnimation.ButtonIniciarSort.clicked.connect(self.changeBotonIniciar)
         self.ScreenAnimation.ButtonIniciarSort.clicked.connect(self.selectionSort)
-
         
+        
+
+            
         
 
     #Metodos
         
     def selectionSort(self):
             
-            for i in range(len(self.array)):
+            self.arrayAux.sort()
 
-                minIndex = i
 
-                # Encontrar el índice del mínimo
-                for j in range(i + 1, len(self.array)):
-                    if self.array[j] <= self.array[minIndex]:
-                        minIndex = j
-
-                # Intercambiar elementos en la lista de números
-                self.array[i], self.array[minIndex] = self.array[minIndex], self.array[i]
-
-    
-                # Intercambiar widgets de la lista de carros
-                self.listaCarros[i], self.listaCarros[minIndex] = self.listaCarros[minIndex], self.listaCarros[i]
+            if(self.array != self.arrayAux):
+                 
+                   
 
             
-            print(self.array) #imprime el array ordenado por consola
+                for i in range(len(self.array)):
+
+                    self.minIndex = i
+
+                    # Encontrar el índice del mínimo
+                    for j in range(i + 1, len(self.array)):
+                        if self.array[j] < self.array[self.minIndex]:
+                            self.minIndex = j
+                            
+                        
+                    if self.array != self.arrayAux:
+                        self.indicesMinimos+=[self.minIndex]
+                    
+
+                    #if(len(self.indicesMinimos) == 0):
+                        
+                     #   self.indicesMinimos = [len(self.array)-1 for i in range(len(self.array))]  
+                        
+                        
+                    # Intercambiar elementos en la lista de números
+
+                    self.array[i], self.array[self.minIndex] = self.array[self.minIndex], self.array[i]
+                    
+        
+                    # Intercambiar widgets de la lista de carros
+                    self.listaCarros[i], self.listaCarros[self.minIndex] = self.listaCarros[self.minIndex], self.listaCarros[i]
+            
+            
+            else:
+                 self.indicesMinimos = [i for i in range(len(self.array))]
+             
+                
             QTimer.singleShot(1000, self.mostrarAnimacion) #dispara la animacion 1 segundo despues de ordenar el codigo
+
 
     def mostrarAnimacion(self):
 
+        timeDelay = 10000
+       
         
-        print(self.flag)
-         
+        
         if(self.flag < self.ScreenMenu.spinBoxCantElementos.value()):
 
             
-            print(self.flag)
-
-            print(self.listaCarros[self.flag].objectName())
+            
+                                                         #arrayObjToMove
 
             QTimer.singleShot(1000, lambda: self.run(self.listaCarros[self.flag], self.flag))
-            print(f'El carro {self.listaCarros[self.flag].objectName()} va en el parqueo {self.flag}')
+            
 
-            QTimer.singleShot(3000, lambda: self.delay())
+
+            if (self.flag<len(self.indicesMinimos)):
+
+
+                if(self.listaCarros2[self.flag].x()==self.listaParqueos[self.indicesMinimos[self.flag]].x()):
+                     timeDelay = 3000
+                else:
+                     QTimer.singleShot(6000, lambda: self.run2(self.listaCarros2[self.flag], self.indicesMinimos[self.flag]))
+
+
+
+            QTimer.singleShot(timeDelay, lambda: self.delay())
             
             
         
         else:
-            
-            pass
-    
-    def delay(self):
-        QTimer.singleShot(300, lambda: self.sumarFlag())
-        QTimer.singleShot(2000, lambda: self.mostrarAnimacion())
-         
 
+            QtCore.QTimer.singleShot(200, self.changeBotonFinal)
+            
+
+    def delay(self):
+
+        print(f'{len(self.indicesMinimos)} y {self.flag}') 
+
+        try:
+            self.listaCarros2[self.flag], self.listaCarros2[self.indicesMinimos[self.flag]] = self.listaCarros2[self.indicesMinimos[self.flag]], self.listaCarros2[self.flag]
+        except IndexError:
+             pass
+        
+        QTimer.singleShot(1000, lambda: self.sumarFlag())
+
+        QTimer.singleShot(2000, lambda: self.mostrarAnimacion())
+        
+         
     def sumarFlag(self):
          self.flag+=1
         
 
     def cantNums(self, value):
         #metodo para reducir o aumentar la cantidad de entradas  
-        if value > self.previous_value:  
+        if value > self.previousValue:  
                       
                 self.listaNums[value-1].setVisible(True)
 
-        elif value < self.previous_value:
-                self.listaNums[self.previous_value-1].setVisible(False)
+        elif value < self.previousValue:
+                self.listaNums[self.previousValue-1].setVisible(False)
 
         # Actualizar el valor anterior
-        self.previous_value = value
+        self.previousValue = value
 
 
-    
     def changeScreenAnimation(self):
          
         if(self.ScreenMenu.spinBoxCantElementos.value() == 8):
@@ -191,10 +256,9 @@ class App(QtWidgets.QMainWindow):
         for i in range(self.ScreenMenu.spinBoxCantElementos.value()):
 
             self.array += [self.listaNums[i].value()]
-        
+            self.arrayAux += [self.listaNums[i].value()]
 
-         
-
+            
 
         self.objectMenuScreen.hide()
         self.objectAnimationScreen.show()
@@ -205,11 +269,13 @@ class App(QtWidgets.QMainWindow):
          self.objectIntroScreen.hide()
          self.objectMenuScreen.show()
 
+
     def changeScreenPresentacion(self):
          
          
          self.hide()
          self.objectIntroScreen.show()
+
 
     def changeBotonIniciar(self):
          
@@ -217,14 +283,14 @@ class App(QtWidgets.QMainWindow):
         self.ScreenAnimation.ButtonIniciarSortFin.setVisible(True)
 
         #Funcion para controlar el tiempo entre evento de la subclase QtCore.Qtimer
-        QtCore.QTimer.singleShot(5000, self.changeBotonFinal)
-     
     
+
     def changeBotonFinal(self):
          
         self.ScreenAnimation.ButtonIniciarSortFin.setVisible(False)
         self.ScreenAnimation.ButtonIniciarSort.setVisible(True)
     
+
     def rotarCarro(self, grados, car):
 
         
@@ -272,29 +338,26 @@ class App(QtWidgets.QMainWindow):
                           self.ScreenAnimation.posicion7, self.ScreenAnimation.posicion8, self.ScreenAnimation.posicion9,
                           self.ScreenAnimation.posicion10
                          ]
-
-         
-         print(f'{posicionParqueo}')
-         
          
          if(car.x()>listaPosiciones[posicionParqueo].x()):
-              print(listaPosiciones[posicionParqueo].objectName())
-              print(f'{car.objectName()} != {listaPosiciones[posicionParqueo].objectName()}')
-              print(f'{car.x()}>{listaPosiciones[posicionParqueo].x()} and  {car.y()} > {listaPosiciones[posicionParqueo].y()} and {posicionParqueo}')
-              print("se fue a la izquierda")
+              
+              
               
               self.moverCarro(car, posicionParqueo, 270, 90)
 
          elif(car.x()<listaPosiciones[posicionParqueo].x()):
-              print(f'{car.x()}<{listaPosiciones[posicionParqueo].x()}')
               
-              print("se fue a la derecha")
-              self.moverCarro(car, posicionParqueo, 90, 270)
+              
+              
+              
+            self.moverCarro(car, posicionParqueo, 90, 270)
+
 
          elif(car.x()==listaPosiciones[posicionParqueo].x()):
 
 
-            print(f"solo retrocedio, porque {car.x()} == {listaPosiciones[posicionParqueo].x()}")
+
+            
             x=car.x()
             y=car.y()
         
@@ -347,11 +410,89 @@ class App(QtWidgets.QMainWindow):
 
         
         self.motion.start()
+
+
+    def intercambiarCarro(self, car, posicionParqueo, grado1, grado2):
+
+        listaParqueos=[self.ScreenAnimation.parqueo1, self.ScreenAnimation.parqueo2, self.ScreenAnimation.parqueo3,
+                          self.ScreenAnimation.parqueo4, self.ScreenAnimation.parqueo5, self.ScreenAnimation.parqueo6,
+                          self.ScreenAnimation.parqueo7, self.ScreenAnimation.parqueo8, self.ScreenAnimation.parqueo9,
+                          self.ScreenAnimation.parqueo10
+                         ]
+         
         
+
+        x=car.x()
+        y=car.y()
+    
+        self.motion = QtCore.QPropertyAnimation(car, b"geometry")
+        
+        self.motion.setDuration(5000)  # Duración en milisegundos, en este caso, 5 segundos
+        # el primer parametro, va de 0 a 1
+        self.motion.setKeyValueAt(0, QtCore.QRect(x,y,0,0))
+        self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+150,0,0))
+
+        self.delayFunciones(self.rotarCarro, argFuncion1=grado1, 
+                            argFuncion2=car, time=2500)
+        
+
+        self.motion.setKeyValueAt(0.75, QtCore.QRect(
+                listaParqueos[posicionParqueo].x(),y+150,0,0)) # y simula basicamente steps
+        
+        self.delayFunciones(self.rotarCarro, argFuncion1=grado2, 
+                            argFuncion2=car,time=3800)
+
+
+    
+
+        self.motion.setKeyValueAt(1, QtCore.QRect(listaParqueos[posicionParqueo].x(), y, 0,0))
+        
+
+        
+        self.motion.start()
+    
+
+    def run2(self, car, posicionParqueo):
+         
+         print(f"Tuvo el error {self.flag}")
+         
+        
+         
+         
+         self.listaParqueos=[self.ScreenAnimation.parqueo1, self.ScreenAnimation.parqueo2, self.ScreenAnimation.parqueo3,
+                          self.ScreenAnimation.parqueo4, self.ScreenAnimation.parqueo5, self.ScreenAnimation.parqueo6,
+                          self.ScreenAnimation.parqueo7, self.ScreenAnimation.parqueo8, self.ScreenAnimation.parqueo9,
+                          self.ScreenAnimation.parqueo10
+                         ]
+
+         
+         
+         if(car.x()>self.listaParqueos[posicionParqueo].x()):
+              
+              
+              
+              self.intercambiarCarro(car, posicionParqueo, 270, 90)
+
+         elif(car.x()<self.listaParqueos[posicionParqueo].x()):
+              
+
+              
+
+              
+              
+              self.intercambiarCarro(car, posicionParqueo, 90, 270)
+
+    
+    
+
+
+
+
+
     #Main
 if __name__ == "__main__":
 
     appSwitch = QtWidgets.QApplication(sys.argv)
-    window1 = App()
-    window1.show()
+    windowStart = App()
+    windowStart.show()
     sys.exit(appSwitch.exec_())
