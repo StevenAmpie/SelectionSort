@@ -32,7 +32,7 @@ class ScreenAnimation(object):
         self.parqueo.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.parqueo.setText("")
         self.parqueo.setPixmap(QtGui.QPixmap("Parqueo/Parqueo.jpg"))
-        self.parqueo.setObjectName("Parqueo/parqueo")
+        self.parqueo.setObjectName("parqueo")
         self.car1 = QtWidgets.QLabel(self.centralwidget)
         self.car1.setGeometry(QtCore.QRect(50, 200, 101, 161))
         self.car1.setMinimumSize(QtCore.QSize(101, 161))
