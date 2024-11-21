@@ -1,7 +1,7 @@
 
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QTransform, QPixmap, QPainter, QFont, QIcon
+from PyQt5.QtGui import QTransform, QPixmap, QPainter, QFont
 import sys
 
 
