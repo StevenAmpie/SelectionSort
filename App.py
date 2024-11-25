@@ -291,14 +291,21 @@ class App(QtWidgets.QMainWindow):
         self.ScreenAnimation.ButtonIniciarSortFin.setVisible(False)
         self.ScreenAnimation.ButtonIniciarSort.setVisible(True)
     
-
-    def rotarCarro(self, grados, car):
-
+    def rotarLabel(self, car, x, y):
+         
+        car.setMinimumSize(QtCore.QSize(x, y))
+        car.setMaximumSize(QtCore.QSize(x, y))
         
+
+    def rotarCarro(self, grados, car, x, y):
+
+
         current_pixmap = car.pixmap()    
         transform = QTransform().rotate(grados)
         rotated_pixmap = current_pixmap.transformed(transform, mode=Qt.SmoothTransformation)
         car.setPixmap(rotated_pixmap)
+
+        self.rotarLabel(car, x, y)
 
 
     def addNumberTopToLabel(self, num, label):
@@ -323,12 +330,12 @@ class App(QtWidgets.QMainWindow):
         label.setPixmap(new_pixmap)
     
 
-    def delayFunciones(self, funcionName, argFuncion1, argFuncion2, time):
+    def delayFunciones(self, funcionName, argFuncion1, argFuncion2, time, x, y):
          
 
          self.timer = QTimer(self) #Crea un objeto de la clase Qtimer
          self.timer.setSingleShot(True)  # Solo ejecutar una vez
-         self.timer.timeout.connect(lambda: funcionName(argFuncion1, argFuncion2)) #pasa en un lambda la funcion con su argumento
+         self.timer.timeout.connect(lambda: funcionName(argFuncion1, argFuncion2, x, y)) #pasa en un lambda la funcion con su argumento
          self.timer.start(time)  #inicia el temporizador con el tiempo ingresado en la funcion 
 
 
@@ -367,7 +374,7 @@ class App(QtWidgets.QMainWindow):
             # el primer parametro, va de 0 a 1
             self.motion.setKeyValueAt(0, QtCore.QRect(x,y,0,0))
             self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+150,0,0))
-            self.motion.setKeyValueAt(1, QtCore.QRect(listaPosiciones[posicionParqueo].x(),y+300,0,0))
+            self.motion.setKeyValueAt(1, QtCore.QRect(listaPosiciones[posicionParqueo].x(),y+315,0,0))
             
 
             self.motion.start()
@@ -375,6 +382,8 @@ class App(QtWidgets.QMainWindow):
 
     def moverCarro(self, car, posicionParqueo, grado1, grado2):
 
+        print(car.size())
+        
         listaPosiciones=[self.ScreenAnimation.posicion1, self.ScreenAnimation.posicion2, self.ScreenAnimation.posicion3,
                           self.ScreenAnimation.posicion4, self.ScreenAnimation.posicion5, self.ScreenAnimation.posicion6,
                           self.ScreenAnimation.posicion7, self.ScreenAnimation.posicion8, self.ScreenAnimation.posicion9,
@@ -391,22 +400,21 @@ class App(QtWidgets.QMainWindow):
         self.motion.setDuration(5000)  # Duración en milisegundos, en este caso, 5 segundos
         # el primer parametro, va de 0 a 1
         self.motion.setKeyValueAt(0, QtCore.QRect(x,y,0,0))
-        self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+150,0,0))
+        self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+170,0,0))
 
         self.delayFunciones(self.rotarCarro, argFuncion1=grado1, 
-                            argFuncion2=car, time=2500)
+                            argFuncion2=car, time=2500, x=171, y=111)
         
 
         self.motion.setKeyValueAt(0.75, QtCore.QRect(
-                listaPosiciones[posicionParqueo].x(),y+150,0,0)) # y simula basicamente steps
+                listaPosiciones[posicionParqueo].x(),y+170,0,0)) # y simula basicamente steps
         
         self.delayFunciones(self.rotarCarro, argFuncion1=grado2, 
-                            argFuncion2=car,time=3800)
-
+                            argFuncion2=car,time=3800, x=101, y=161)
 
     
 
-        self.motion.setKeyValueAt(1, QtCore.QRect(listaPosiciones[posicionParqueo].x(),y+300,0,0))
+        self.motion.setKeyValueAt(1, QtCore.QRect(listaPosiciones[posicionParqueo].x(),y+315,0,0))
         
 
         
@@ -431,17 +439,17 @@ class App(QtWidgets.QMainWindow):
         self.motion.setDuration(5000)  # Duración en milisegundos, en este caso, 5 segundos
         # el primer parametro, va de 0 a 1
         self.motion.setKeyValueAt(0, QtCore.QRect(x,y,0,0))
-        self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+150,0,0))
+        self.motion.setKeyValueAt(0.5, QtCore.QRect(x,y+160,0,0))
 
         self.delayFunciones(self.rotarCarro, argFuncion1=grado1, 
-                            argFuncion2=car, time=2500)
+                            argFuncion2=car, time=2500, x=181, y=120)
         
 
         self.motion.setKeyValueAt(0.75, QtCore.QRect(
-                listaParqueos[posicionParqueo].x(),y+150,0,0)) # y simula basicamente steps
+                listaParqueos[posicionParqueo].x(),y+160,0,0)) # y simula basicamente steps
         
         self.delayFunciones(self.rotarCarro, argFuncion1=grado2, 
-                            argFuncion2=car,time=3800)
+                            argFuncion2=car,time=3800, x=101, y=161)
 
 
     
